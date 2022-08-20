@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+// const BASE_URL='https://breeze-jsw.herokuapp.com';
+const BASE_URL='http://localhost:3001';
 
 function App() {
+  const [stations, setStations] = React.useState([]);
+
+  React.useEffect(() => {
+    window.fetch(`${BASE_URL}/stations`, {
+      method: 'GET'
+    })
+    .then(response => response.json())
+    .then(data => console.log('data', data));
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div></div>
   );
 }
 
