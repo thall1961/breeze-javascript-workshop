@@ -1,20 +1,21 @@
 import React from 'react';
+import {Station} from './components/Station';
 
-// const BASE_URL='https://breeze-jsw.herokuapp.com';
-const BASE_URL='http://localhost:3001';
+const BASE_URL = 'https://breeze-jsw.herokuapp.com';
 
 function App() {
   const [stations, setStations] = React.useState([]);
 
   React.useEffect(() => {
-    window.fetch(`${BASE_URL}/stations`, {
-      method: 'GET'
-    })
-    .then(response => response.json())
-    .then(data => console.log('data', data));
-  })
+    window
+      .fetch(`${BASE_URL}/stations`, {
+        method: 'GET'
+      })
+      .then((response) => response.json())
+      .then((data) => console.log('data', data));
+  });
   return (
-    <div></div>
+   stations && stations.map(station => <Station station={station} />) 
   );
 }
 
