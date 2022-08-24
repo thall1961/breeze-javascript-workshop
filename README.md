@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Breeze JavaScript Workshop
+
+1. Clone the repo `git clone https://github.com/thall1961/breeze-javascript-workshop.git`
+2. `cd` into `breeze-javascript-workshop` and run `npm install`
+3. Have a look at the code, exercises, and any other documentation about JS 🔥🎉
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
