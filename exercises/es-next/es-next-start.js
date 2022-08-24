@@ -61,7 +61,6 @@ const beans = [' ', 'b', 'e', 'a', 'n', 's'];
 // it look like 'cool beans' is logged to the console
 // console.log(coolBeans);
 
-
 // 6. create a function that returns a tuple (an array with two values)
 // const [peanutButter, honey] = getSandy();
 // console.log(peanutButter, honey);

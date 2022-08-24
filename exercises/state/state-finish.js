@@ -66,7 +66,6 @@ function init() {
 }
 init();
 
-
 function makeAdder(x) {
   return function (y) {
     return x + y;
@@ -97,7 +96,7 @@ const counter = (function () {
 
     value() {
       return privateCounter;
-    },
+    }
   };
 })();
 
@@ -127,7 +126,7 @@ const makeCounter = function () {
 
     value() {
       return privateCounter;
-    },
+    }
   };
 };
 
@@ -150,33 +149,31 @@ console.log(counter2.value()); // 0.
  * its own closure. Each time one of the counters is called, its lexical environment
  * changes by changing the value of this variable. Changes to the variable value in
  * one closure don't affect the value in the other closure.
- * 
+ *
  * Visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures for more info
  */
 
 /**
- * 
- * 
+ *
+ *
  * The THIS Keyword
- * 
- * 
+ *
+ *
  */
- function classroom(teacher) {
-    return function study() {
-        console.log(
-            `${ teacher } says to study ${ this.topic }`
-        );
-    };
+function classroom(teacher) {
+  return function study() {
+    console.log(`${teacher} says to study ${this.topic}`);
+  };
 }
-const assignment = classroom("Tom");
+const assignment = classroom('Tom');
 assignment();
 
 const homework = {
-    topic: 'History',
-    assignment
+  topic: 'History',
+  assignment
 };
 // the this for 👇 function call will be the homework object
 homework.assignment();
 
 // the this for 👇 function call will be the in-line object
-assignment.call({topic: 'Math'});
+assignment.call({ topic: 'Math' });

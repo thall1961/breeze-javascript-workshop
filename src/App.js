@@ -1,21 +1,16 @@
 import React from 'react';
-import {Station} from './components/Station';
+import { Station } from './components/Station';
+import { getStationPhotos } from './helpers/station-functions';
+import { input } from './helpers/station-styles';
+import './App.css';
 
 const BASE_URL = 'https://breeze-jsw.herokuapp.com';
 
 function App() {
-  const [stations, setStations] = React.useState([]);
-
-  React.useEffect(() => {
-    window
-      .fetch(`${BASE_URL}/stations`, {
-        method: 'GET'
-      })
-      .then((response) => response.json())
-      .then((data) => console.log('data', data));
-  });
   return (
-   stations && stations.map(station => <Station station={station} />) 
+    <div className="container">
+      <h1>Stations</h1>
+    </div>
   );
 }
 
